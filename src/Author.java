@@ -23,12 +23,10 @@ public class Author {
     }
 
     @Override
-    public boolean equals(Object obj) {
-        if (this == obj) return true;
-        if (obj == null || getClass() != obj.getClass()) return false;
-        Author author = (Author) obj;
-        return Objects.equals(firstName, author.firstName) &&
-                Objects.equals(lastName, author.lastName);
+    public boolean equals(Object o) {
+        if (o == null || getClass() != o.getClass()) return false;
+        Author author = (Author) o;
+        return Objects.equals(firstName, author.firstName) && Objects.equals(lastName, author.lastName);
     }
 
     @Override
